@@ -1,5 +1,5 @@
 <div class="sub-menu">
-	<div class="sub-title"><h3>Not yet have an account? / Login Form</h3></div>
+	<div class="sub-title"><h3>Not yet have an account? / Login form</h3></div>
 </div>
 <%= render "layouts/msg" %>
 
@@ -9,6 +9,14 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <div class="large-12 small-12 medium-12 columns">
+    <div class="large-3 columns small-3 medium-3">
+      <%= f.label :username, class: "right inline" %>
+    </div>
+    <div class="large-9 small-9 medium-9 columns" style="padding:0px;">
+      <%= f.text_field :username, autofocus: true, class: "" %>
+    </div>
+  </div>
   <div class="large-12 small-12 medium-12 columns">
     <div class="large-3 columns small-3 medium-3">
       <%= f.label :email, class: "right inline" %>
@@ -56,7 +64,7 @@
   	</div>
   	<% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %>
-         <%= link_to "Forgot your password?", new_password_path(resource_name), style: "font-size:12px;float:right;margin-top:3px;color:#0BA59A;" %>
+         <%= link_to "Forgot your password?", new_password_path(resource_name), style: "font-size:12px;float:right;margin-top:4px;color:#0BA59A;" %>
     </div>
   <% end -%> 
   	<div class="my-btn">
@@ -67,4 +75,10 @@
 </div>
 <% end %>
 </fieldset>
-</div></div>
+</div>
+</div>
+
+
+
+
+

@@ -7,6 +7,10 @@
 	</ul>
 
 	<ul class="menu-2-right">
-		<li><%= link_to "Login / Register", new_user_session_path %></li>
+		<% if user_signed_in? %>
+			<li><%= link_to '<i class="fa fa-power-off"></i> Logout'.html_safe, destroy_user_session_path, method: :delete %></li>
+		<% else %>
+			<li><%= link_to "Login / Register", new_user_session_path %></li>
+		<% end %>
 	</ul>
 </div>
