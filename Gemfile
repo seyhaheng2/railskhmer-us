@@ -9,6 +9,7 @@ gem 'carrierwave'
 gem 'better_errors'
 gem "font-awesome-rails"
 gem 'will_paginate-foundation'
+gem 'masonry-rails'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets

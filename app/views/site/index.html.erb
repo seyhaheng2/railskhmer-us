@@ -1,20 +1,20 @@
 <div class="sub-menu">
-	<div class="sub-title"><h3>Try to Find Something New</h3></div>
+	<div class="sub-title"><h3>Try to find something new</h3></div>
 </div>
 <%= render "layouts/msg" %>
 <div class="pagination-centered" style="margin-top:20px;">
 	<%= will_paginate @products, renderer: FoundationPagination::Rails %>
 </div>
 <div class="content-body">
-<hr style="width:93.8%;margin-top:3px;">
+<!-- <hr style="width:93.4%;margin-top:3px;"> -->
 	<% @products.each do |product| %>
 		<div class="box">
 			<div class="pro-image"><%= image_tag (product.image) %></div>
-			<div class="pro-name"><%= product.name %></div>
-			<div class="pro-desc"><%= truncate(product.description, length: 150) %></div>
+			<div class="pro-name"><%= truncate(product.name, length: 26) %></div>
+			<div class="pro-desc"><%= truncate(product.description, length: 125) %></div>
 		</div>
 	<% end %>
-	<hr style="width:93.8%;margin-top:3px;">
+	<!-- <hr style="width:93.5%;margin-top:3px;"> -->
 </div>
 <div class="pagination-centered">
 	<%= will_paginate @products, renderer: FoundationPagination::Rails %>

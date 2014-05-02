@@ -12,8 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require foundation
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function() {
+    $(document).foundation();
+});
+
+jQuery(document).ready(function() {
+    var $container = $('.content-body');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+            itemSelector: '.box',
+            isAnimated: true,
+            animationOptions: {
+                duration: 650,
+                easing: 'linear',
+                queue: true
+            }
+        });
+    });
+})
