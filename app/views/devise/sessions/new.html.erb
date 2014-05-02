@@ -1,0 +1,26 @@
+<div class="sub-menu">
+	<div class="sub-title"><h3>Login Form</h3></div>
+</div>
+<%= render "layouts/msg" %>
+<div class="large-4 medium-6 large-centered medium-centered columns">
+<fieldset style="margin-top:50px;background:#fff;">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="login-form">
+	<div class="my-input">
+  		<%= f.email_field :email, autofocus: true, placeholder: "Your Email" %>
+  	</div>
+  	<div class="my-input">
+  		<%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+  	</div>
+  	<% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%> 
+  	<div class="my-btn">
+  <%= f.submit "Sign in",class: "success tiny button ", style:"margin-bottom:0px;background:#0BA59A;border-radius:2px;"%>
+  </div> 
+</div>	
+
+</div>
+<% end %>
+</fieldset>
+</div>
