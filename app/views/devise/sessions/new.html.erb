@@ -52,7 +52,7 @@
 
 
 
-<div class="large-5 medium-8 large-centered medium-centered columns">
+<div class="large-5 medium-8 large-centered medium-centered columns" style="height:300px;">
 <fieldset style="margin-top:50px;background:#fff;">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="login-form">
@@ -69,12 +69,15 @@
   <% end -%> 
   	<div class="my-btn">
   <%= f.submit "Sign in",class: "success tiny button expand", style:"margin-bottom:0px;background:#0BA59A;border-radius:2px;"%>
+  <div class="botton-form"><%= link_to '<i class="fa fa-facebook" style="font-size:14px;"></i> Sign in with Facebook'.html_safe, user_omniauth_authorize_path(:facebook),class: "button tiny success expand", style:"margin-bottom:0px;margin-top:8px;background:#43619d;border-radius:2px; "%></div>
   </div> 
+
 </div>	
 
 </div>
 <% end %>
 </fieldset>
+
 </div>
 </div>
 

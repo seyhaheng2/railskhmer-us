@@ -1,8 +1,10 @@
 <div class="sub-menu">
 	<div class="sub-title"><h3>Forgot your password?</h3></div>
 </div>
+<div class="content-reset-pwd" style="height:360px;">
 <div class="large-4 columns large-centered">
 <fieldset style="margin-top:50px;background:#fff;">
+
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -12,4 +14,5 @@
   <div><%= f.submit "Send Email Reset PWD", class: "button success tiny ",style:"margin-bottom:0px;background:#0BA59A;border-radius:2px;" %></div>
 <% end %>
 </fieldset>
+</div>
 </div>
