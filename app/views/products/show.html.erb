@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<div class="content-pro" style="height:350px;">
+<div class="large-5 columns large-centered">
+<fieldset style="background:#fff;">
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -14,11 +15,8 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @product.user %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_product_path(@product),class: "button tiny success",style:"margin-bottom:0px;margin-top:8px;background:#0BA59A;border-radius:2px;" %> 
+<%= link_to 'Back', products_path, class: "button tiny success",style:"margin-bottom:0px;margin-top:8px;background:#0BA59A;border-radius:2px;" %>
+</fieldset>
+</div>
+</div>

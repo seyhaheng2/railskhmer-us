@@ -1,6 +1,12 @@
-<h1>Editing product</h1>
+<div class="sub-menu">
+	<div class="sub-title">
+		<h3 style="color:#fff;"> <%= link_to products_path do %>
+		<i class="fa fa-arrow-left" style="color:#fff;"></i> Editing product</h3>
+		<% end %>
+	</div>
+</div>
+
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<!-- <%#= link_to '-->', products_path %> -->

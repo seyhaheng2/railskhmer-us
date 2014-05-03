@@ -9,14 +9,23 @@
 	<ul class="menu-2-right">
 		<% if user_signed_in? %>
 			<li><%= link_to do %>
-			<%= image_tag current_user.image, size: "35" ,style: "border-radius:30px;margin-top:-3px;"%> 
-			<%= current_user.username %>
-			<% end %>
+				<%= image_tag current_user.image, size: "35" ,style: "border-radius:30px;margin-top:-3px;"%> 
+				<%= current_user.username %>
+				<% end %>
 			</li>
-			<li><%=link_to 'More <i class="fa fa-cogs"></i>'.html_safe%></li>
-			<li><%= link_to '<i class="fa fa-power-off"></i> Logout'.html_safe, destroy_user_session_path, method: :delete %></li>
+			 <li><a class="dropdown" href="#" data-dropdown="drop1">More <i class="fa fa-cogs"></i></a>
+				<ul class="f-dropdown" id="drop1" data-dropdown-content>
+					<li><%= link_to '<i class="fa fa-power-off"></i> Logout'.html_safe, destroy_user_session_path, method: :delete %></li>
+				</ul>
+			 </li>
 		<% else %>
 			<li><%= link_to "Login / Register", new_user_session_path %></li>
 		<% end %>
 	</ul>
 </div>
+
+
+
+
+
+    

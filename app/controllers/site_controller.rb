@@ -7,7 +7,9 @@ class SiteController < ApplicationController
 
   def tutorails
   end
-
+  def show
+    @product = Product.find(params[:product_id])
+  end
   def topics
   end
 

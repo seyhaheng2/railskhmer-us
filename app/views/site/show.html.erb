@@ -1,0 +1,20 @@
+<div class="sub-menu">
+	<div class="sub-title">
+		<h3><%= @product.name %></h3>
+	</div>
+</div>
+<div class="content-footer">
+<div class="content-show">
+<div class="show-form">
+	<div class="youtube" style="text-align: center;">
+		<%= @product.url.html_safe %>
+	</div>
+	<!-- <div class="show-img">
+		<%#= image_tag (@product.image),size: "300" %>
+	</div> -->
+	<div class="show-desc">
+		<%= @product.description %>
+	</div>
+</div>
+</div>
+</div>

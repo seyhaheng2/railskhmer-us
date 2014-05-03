@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'site/topics'
 
+  get 'site/show'
+
   get 'site/forum'
 
   get 'site/contact'
