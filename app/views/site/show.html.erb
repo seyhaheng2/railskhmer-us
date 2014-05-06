@@ -1,20 +1,51 @@
-<div class="sub-menu">
+<!-- <div class="sub-menu">
 	<div class="sub-title">
 		<h3><%= @product.name %></h3>
 	</div>
-</div>
+</div> -->
 <div class="content-footer">
 <div class="content-show">
-<div class="show-form">
-	<div class="youtube" style="text-align: center;">
-		<%= @product.url.html_safe %>
-	</div>
-	<!-- <div class="show-img">
-		<%#= image_tag (@product.image),size: "300" %>
+<div class="show-form" style="background:#fff;">
+	<!-- <div class="youtube" style="text-align: center;">
+
 	</div> -->
+	<div class="show-img">
+		<%= image_tag (@product.image) %>
+	</div> 
+    <div class="show-title">
+        <%= @product.name %>
+        <p>
+            <!-- Post by: <%#= link_to product.user.username if product.user %>  -->
+                <% if @product.created_at > Time.now.beginning_of_day %>
+                    <i class="fa fa-clock-o" style="font-size:14px;"></i> <%="#{time_ago_in_words(@product.created_at)} ago"%> 
+                <% else %> 
+                    <i class="fa fa-clock-o" style="font-size:14px;"></i> <%= @product.created_at.strftime("%b %d, %Y") %>
+                <% end %>
+                <i class="fa fa-user" style="font-size:14px;padding-left:20px;"></i> <%= link_to @product.user.username if @product.user %>
+
+        </p>
+        <hr style="margin-top:30px;margin-bottom:20px;">
+    </div>
 	<div class="show-desc">
 		<%= @product.description %>
 	</div>
 </div>
 </div>
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'railskhmer'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 </div>
+
+

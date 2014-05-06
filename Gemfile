@@ -10,11 +10,10 @@ gem 'better_errors'
 gem "font-awesome-rails"
 gem 'will_paginate-foundation'
 gem 'masonry-rails'
+gem 'nested_form'
 # Use postgresql as the database for Active Record
-group :development do
-	gem 'pg'
-	gem 'rails_12factor'
-end
+gem 'pg'
+gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
