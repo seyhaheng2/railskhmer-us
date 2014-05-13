@@ -11,6 +11,8 @@ gem "font-awesome-rails"
 gem 'will_paginate-foundation'
 gem 'masonry-rails'
 gem 'nested_form'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'rails_12factor', group: :production
