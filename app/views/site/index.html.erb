@@ -11,7 +11,7 @@
 	<% @products.each do |product| %>	
 	<%= link_to site_show_path(product_id: product, class: "alink") do  %>
 		<div class="box">
-			<div class="pro-image"><%= image_tag (product.image) %></div>
+			<div class="pro-image"><%= image_tag product.image.url(:normal) %></div>
 			<div class="pro-name"><%= truncate(product.name, length: 26) %></div>
 			<div class="pro-desc"><%= truncate(product.description, length: 125) %></div>
 		</div>
